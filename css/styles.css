@@ -185,38 +185,57 @@ header nav{
     z-index: 900;
     }.img-title{
         margin: auto;
-        height: 500px;
+        height: 450px;
         object-fit: cover;
         object-position: center;
         position: relative;
-        top: 18%;
+        top: 25%;
         left: 0;
         right: 0;
     }
 }
+
 @media only screen and (max-width: 900px) {
-.title-h1{
-    font-size: 70px;
-    top: 10%;
+    .title-h1{
+        font-size: 70px;
+        top: 8%;
+        }
+    .title-p{
+        font-size: 30px;
+        top: 20%;
+        }
+    .button-contact a{
+        width: 120px;
+        height: 40px;
+        top: 28%;
+        }.button-contact a p{
+        font-size: 17px;
+        }
     }
-.title-p{
-    font-size: 30px;
-    top: 20%;
-    }
-.button-contact a{
-    width: 120px;
-    height: 40px;
-    top: 28%;
-    }.button-contact a p{
-    font-size: 17px;
-    }
-}
+
 @media only screen and (max-width: 650px) {
+.img-title{
+        height: 400px;
+        top: 25%;
+    }
 .title-h1{
     font-size: 10vw;
-    top: 10%;
+    top: 18%;
+    }
+.title-p{
+    top: 25%;
+    }
+.button-contact a{
+    top: 35%;
     }
 }
+
+@media only screen and (max-width: 400px) {
+    .img-title{
+            height: 300px;
+            top: 30%;
+        }
+    }
 
 
 
@@ -312,6 +331,107 @@ header nav{
         font-weight: 400;
         font-family: 'Heebo', sans-serif;
     }
+
+
+
+@media only screen and (max-width: 1000px){
+#aboutme{
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+}
+
+.title-aboutme{
+    margin: auto 10px;
+    width: 200px;
+    display: flex;
+    }.title-aboutme h1{
+        font-size: 40px;
+    }
+
+.divions-1{
+    margin: auto 10px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    }
+.divions-2{
+    margin: auto 10px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    }
+
+
+.container__aboutme{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.container__info{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+}
+.container__info-img{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    }.container__info-img img{
+        margin: auto;
+        width: 300px;
+        height: auto;
+    }
+.container__info-text{
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    }.container__info-text p{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+#aboutme{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 85%;
+}
+
+.title-aboutme{
+    width: 150px;
+    }.title-aboutme h1{
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 500px){
+#aboutme{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15% 85%;
+}
+
+.title-aboutme{
+    width: 150px;
+    }.title-aboutme h1{
+        font-size: 25px;
+    }
+
+}
 
 
 
@@ -648,10 +768,79 @@ header nav{
         width: 800px;
     }
 
-@media only screen and (max-width: 400px){
-    
+
+
+@media only screen and (max-width: 1100px){
+.contact{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    overflow: hidden;
+    z-index: 100;
+}
+.contact2{
+    display: none;
 }
 
+.title-container__contact h1{
+    margin: auto;
+    font-size: 70px;
+}.title-container__contact p{
+    margin: auto;
+    font-size: 30px;
+}
+
+.redes-contact{
+    margin: 20px;
+    width: 250px;
+    height: 70px;
+    }
+    .container-button{
+        grid-template-columns: 35% 65%;
+    }
+    .container-button button i{
+        font-size: 40px;
+        }
+    .container-button div p{
+        font-size: 18px;
+        }
+
+.img-contact{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    }.img-contact img{
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 700px;
+        opacity: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+.title-container__contact h1{
+    margin: auto;
+    font-size: 55px;
+}.title-container__contact p{
+    margin: auto;
+    font-size: 25px;
+}
+}
+
+@media only screen and (max-width: 400px){
+    .title-container__contact h1{
+        margin: auto;
+        font-size: 45px;
+    }.title-container__contact p{
+        margin: auto;
+        font-size: 25px;
+    }
+    }
 
 
 
@@ -670,4 +859,12 @@ header nav{
     font-size: 25px;
     font-family: 'Heebo', sans-serif;
     font-weight: 400;
+}
+
+
+
+@media only screen and (max-width: 700px){
+    .copy{
+        font-size: 15px;
+    }
 }
