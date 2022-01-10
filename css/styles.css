@@ -5,6 +5,20 @@
     background-color: #000000;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+::-webkit-scrollbar-thumb {
+    background: #870000;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #800000;
+}
+
 :root{
     --main-font: 'Poppins', sans-serif;
 }
@@ -12,7 +26,6 @@
 
 
 /*---------------------------------------------------------------------------*/
-
 #header{
     width: 100%;
     height: 80px;
@@ -46,7 +59,7 @@
         #header ul{
             width: auto;
             height: 100%;
-            display: flex;
+            display: none;
             align-items: center;
         }
             #header ul li{
@@ -58,18 +71,59 @@
                 list-style: none;
             }
 
+/* RESPONSIVE ------------------------------------------ */
+@media only screen and (min-width: 960px) {
+    #header ul{
+        display: flex;
+        }
+        #header ul li{
+            margin-left: 40px;
+            font-size: 20px;
+        }
+}
+
+@media only screen and (min-width: 1280px) {
+#header{
+    height: 100px;
+}
+    #header nav .logo h1{
+        font-size: 35px;
+    }
+    #header ul li{
+        margin-left: 50px;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    #header{
+        height: 120px;
+    }
+        #header nav .logo h1{
+            font-size: 40px;
+        }
+        #header ul li{
+            margin-left: 50px;
+            font-size: 35px;
+        }
+}
+
+
+
 
 
 /*---------------------------------------------------------------------------*/
-
 #inicio{
     width: 100%;
     height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
     background: rgb(0, 0, 0);
     background: linear-gradient(180deg, #000000 0%, #000000 40%, #2D2D2D 100%);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10% 30% 60%;
+    overflow: hidden;
 }
 
     #inicio main{
@@ -86,10 +140,12 @@
             margin-bottom: 20px;
             color: #ffffff;
             font-family: var(--main-font);
-            font-size: 60px;
+            font-size: 50px;
             font-weight: 800;
             line-height: 1;
-        }
+            }#inicio main h1 span{
+                color: #870000;
+                }
         #inicio main h2{
             margin: 0;
             background: -webkit-linear-gradient(#870000 0%, #000000 100%);
@@ -97,7 +153,7 @@
             -webkit-text-fill-color: transparent;
             color: #ffffff;  ;
             font-family: var(--main-font);
-            font-size: 40px;
+            font-size: 30px;
             font-weight: 800;
         }
         #inicio main p{
@@ -137,10 +193,122 @@
                 filter: blur(2px) brightness(60%);
                 }
 
+/* RESPONSIVE ------------------------------------------ */
+@media only screen and (min-width: 480px) {
+    #inicio{
+    min-height: 700px;
+    max-height: 1000px;
+}
+        #inicio main h1{
+            margin-bottom: 20px;
+            font-size: 80px;
+            line-height: 1;
+        }
+        #inicio main h2{
+            font-size: 40px;
+        }
+        #inicio main p{
+            font-size: 35px;
+        }
+}
+
+@media only screen and (min-width: 960px) {
+    #inicio{
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #inicio main{
+        padding-left: 7.5%;
+    }
+        #inicio main h1{
+            margin-bottom: 20px;
+            font-size: 90px;
+            }
+        #inicio main h2{
+            font-size: 55px;
+        }
+        #inicio main p{
+            font-size: 35px;
+        }
+
+        #inicio aside .camilo{
+            height:85%;
+            width: auto;
+        }
+        #inicio aside .board{
+            width: 700px;
+            left: 10%;
+            }
+            #inicio aside .board img{
+                width: 700px;
+                height: auto;
+                }
+}
+
+@media only screen and (min-width: 1280px) {
+    #inicio{
+    min-height: 700px;
+    max-height: 1000px;
+}
+
+        #inicio main h1{
+            margin-bottom: 20px;
+            font-size: 110px;
+            }
+        #inicio main h2{
+            font-size: 65px;
+        }
+        #inicio main p{
+            font-size: 45px;
+        }
+
+        #inicio aside .board{
+            width: 900px;
+            left: 10%;
+            }
+            #inicio aside .board img{
+                width: 900px;
+                height: auto;
+                }
+}
+
+@media only screen and (min-width: 1920px) {
+    #inicio{
+    min-height: 900px;
+    max-height: 1200px;
+}
+
+        #inicio main h1{
+            margin-bottom: 20px;
+            font-size: 160px;
+            }
+        #inicio main h2{
+            font-size: 75px;
+        }
+        #inicio main p{
+            font-size: 55px;
+        }
+
+        #inicio aside .board{
+            width: 1200px;
+            left: 10%;
+            }
+            #inicio aside .board img{
+                width: 1200px;
+                height: auto;
+                }
+}
+
+
+
 
 
 /*---------------------------------------------------------------------------*/
-
 #aboutme{
     width: 100%;
     height: 900px;
@@ -150,7 +318,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 30px;
+    row-gap: 50px;
 }
     .shadow-aboutme{
         width: 100%;
@@ -186,6 +354,7 @@
         }
 
     #aboutme main{
+        z-index: 100;
         width: 100%;
         height: auto;
         display: flex;
@@ -233,11 +402,10 @@
             }
             #aboutme main article .elo{
                 display: flex;
-                justify-content: flex-start;
+                justify-content: space-evenly;
                 align-items: center;
                 }
                 #aboutme main article .elo p{
-                    margin-right: 10px;
                     color: #ffffff;
                     font-family: var(--main-font);
                     font-size: 20px;
@@ -249,15 +417,14 @@
             #aboutme main article .rank{
                 margin-top: 10px;
                 display: flex;
-                justify-content: flex-start;
+                justify-content: space-evenly;
                 align-items: center;
                 }
                 #aboutme main article .rank div{
-                    margin-right: 20px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    align-items: flex-start;
+                    align-items: center;
                     }
                 #aboutme main article .rank h3{
                     color: #870000;
@@ -266,7 +433,7 @@
                     font-weight: 300;
                 }
                 #aboutme main article .rank p{
-                    margin-top: 3px;
+                    margin-top: 5px;
                     color: #ffffff;
                     font-family: var(--main-font);
                     font-size: 20px;
@@ -274,6 +441,7 @@
                 }
 
     #aboutme Aside{
+        z-index: 100;
         width: 100%;
         height: auto;
         display: flex;
@@ -293,6 +461,229 @@
             position: absolute;
             bottom: 0;
         }
+
+/* RESPONSIVE ------------------------------------------ */
+@media only screen and (min-width: 480px) {
+#aboutme{
+    height: 1000px;
+    row-gap: 50px;
+}
+
+            #aboutme main section p{
+                font-size: 20px;
+            }
+
+            #aboutme main article h1{
+                font-size: 35px;
+            }
+            #aboutme main article .divition{
+                margin: 10px 0;
+                width: 120px;
+                height: 5px;
+                border-radius: 5px;
+            }
+
+                #aboutme main article .elo p{
+                    font-size: 30px;
+                    }#aboutme main article .elo p span{
+                        font-size: 20px;
+                        }
+            #aboutme main article .rank{
+                margin-top: 10px;
+                }
+                #aboutme main article .rank div{
+                    margin-top: 20px;
+                    }
+                #aboutme main article .rank h3{
+                    font-size: 15px;
+                }
+                #aboutme main article .rank p{
+                    margin-top: 5px;
+                    font-size: 30px;
+                }
+
+        #aboutme Aside img{
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+        }
+}
+
+@media only screen and (min-width: 960px) {
+#aboutme{
+    height: 800px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 85%;
+    row-gap: 0;
+}
+
+    #aboutme nav{
+        padding-right: 20%;
+        grid-column-start: 2;
+        grid-row-start: 1;
+        }
+        #aboutme nav h1{
+            font-size: 50px;
+        }
+        #aboutme nav .divition-nav{
+            margin-top: 5px;
+            width: 150px;
+            height: 8px;
+            border-radius: 5px;
+        }
+
+    #aboutme main{
+        width: 100%;
+        height: auto;
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+        #aboutme main section{
+            padding-left: 15%;
+            margin-bottom: 50px;
+            width: 100%;
+            height: auto;
+        }
+            #aboutme main section p{
+                font-size: 25px;
+            }
+
+        #aboutme main article{
+            padding-left: 15%;
+            margin: auto;
+            width: 100%;
+            height: auto;
+        }
+            #aboutme main article h1{
+                font-size: 40px;
+            }
+            #aboutme main article .divition{
+                margin: 10px 0;
+                width: 120px;
+                height: 4px;
+                border-radius: 5px;
+            }
+
+                #aboutme main article .elo p{
+                    font-size: 30px;
+                    }#aboutme main article .elo p span{
+                        font-size: 15px;
+                        }
+            #aboutme main article .rank{
+                margin-top: 10px;
+                }
+                #aboutme main article .rank h3{
+                    font-size: 15px;
+                }
+                #aboutme main article .rank p{
+                    margin-top: 5px;
+                    font-size: 30px;
+                }
+
+    #aboutme Aside{
+        width: 100%;
+        height: auto;
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+        #aboutme Aside img{
+            width: 400px;
+            height: 400px;
+            border-radius: 25px;
+        }
+}
+
+@media only screen and (min-width: 1280px) {
+#aboutme{
+    height: 900px;
+}
+    .shadow-aboutme{
+        height: 300px;
+    }
+
+            #aboutme main section p{
+                font-size: 30px;
+            }
+
+            #aboutme main article h1{
+                font-size: 45px;
+            }
+            #aboutme main article .divition{
+                margin: 10px 0;
+                width: 150px;
+                height: 5px;
+                border-radius: 5px;
+            }
+
+                #aboutme main article .elo p{
+                    font-size: 35px;
+                    }#aboutme main article .elo p span{
+                        font-size: 20px;
+                        }
+            #aboutme main article .rank{
+                margin-top: 10px;
+                }
+                #aboutme main article .rank h3{
+                    font-size: 20px;
+                }
+                #aboutme main article .rank p{
+                    margin-top: 5px;
+                    font-size: 35px;
+                }
+}
+
+@media only screen and (min-width: 1920px) {
+#aboutme{
+    height: 1100px;
+}
+        #aboutme nav h1{
+            font-size: 70px;
+        }
+        #aboutme nav .divition-nav{
+            margin-top: 10px;
+            width: 200px;
+            height: 10px;
+        }
+
+            #aboutme main section p{
+                font-size: 40px;
+            }
+
+            #aboutme main article h1{
+                font-size: 60px;
+            }
+            #aboutme main article .divition{
+                margin: 20px 0;
+                width: 180px;
+                height: 7px;
+                border-radius: 5px;
+            }
+
+            #aboutme main article .elo p{
+                font-size: 50px;
+                }#aboutme main article .elo p span{
+                    font-size: 30px;
+                    }
+            #aboutme main article .rank{
+                margin-top: 30px;
+                }
+                #aboutme main article .rank h3{
+                    font-size: 30px;
+                }
+                #aboutme main article .rank p{
+                    margin-top: 10px;
+                    font-size: 50px;
+                }
+
+        #aboutme Aside img{
+            width: 600px;
+            height: 600px;
+            border-radius: 30px;
+        }
+}
+
+
 
 
 
@@ -378,6 +769,46 @@
                     font-weight: 700;
                 }
 
+/* RESPONSIVE ------------------------------------------ */
+@media only screen and (min-width: 960px) {
+#awards{
+    margin-bottom: 100px;
+}
+
+        #awards nav h1{
+            font-size: 50px;
+        }
+        #awards nav .divition-nav{
+            width: 150px;
+            height: 8px;
+        }
+
+        #awards main .card{
+            margin: 50px;
+            padding: 30px;
+            width: 300px;
+            height: 400px;
+            border-radius: 30px;
+        }
+                #awards main .card h1{
+                    font-size: 20px;
+                }
+                #awards main .card p{
+                    font-size: 20px;
+                }
+                #awards main .card h2{
+                    font-size: 50px;
+                }
+}
+
+@media only screen and (min-width: 1920px) {
+#awards{
+    margin-bottom: 150px;
+}
+}
+
+
+
 
 
 /*---------------------------------------------------------------------------*/
@@ -424,11 +855,11 @@
                 margin: 0;
                 color: #ffffff;
                 font-family: var(--main-font);
-                font-size: 30px;
+                font-size: 25px;
                 font-weight: 700;
             }
             #contact nav .title-contact .divition-nav{
-                margin-top: 5px;
+                margin-top: 3px;
                 width: 120px;
                 height: 6px;
                 background-color: #870000;
@@ -468,6 +899,7 @@
                     background-color: transparent;
                     border: none;
                     display: flex;
+                    cursor: pointer;
                 }
                     #contact main section form button i{
                         margin: auto;
@@ -488,6 +920,62 @@
             height: auto;
         }
 
+/* RESPONSIVE ------------------------------------------ */
+@media only screen and (min-width: 640px) {
+#contact{
+    height: 500px;
+}
+    #contact article img{
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+#contact{
+    height: 600px;
+}
+    #contact nav .logo-contact h1{
+        font-size: 50px;
+        }
+    #contact nav .title-contact h1{
+        font-size: 50px;
+    }
+    #contact nav .title-contact .divition-nav{
+        margin-top: 5px;
+        width: 150px;
+        height: 8px;
+    }
+
+    #contact main section form{
+        margin: auto 50px;
+        width: 70px;
+        height: 70px;
+    }
+            #contact main section form button i{
+                font-size: 30px;
+            }
+
+    #contact article img{
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    #contact main section{
+        margin-bottom: 50px;
+    }
+    #contact main section form{
+        margin: auto 50px;
+        width: 80px;
+        height: 80px;
+    }
+            #contact main section form button i{
+                font-size: 35px;
+            }
+}
+
+
+
 
 
 /*---------------------------------------------------------------------------*/
@@ -507,6 +995,22 @@
         }#footer h1 span{
             color: #870000;
             }
+
+/* RESPONSIVE ------------------------------------------ */
+@media only screen and (min-width: 640px) {
+    #footer h1{
+        font-size: 15px;
+        }
+}
+
+@media only screen and (min-width: 960px) {
+#footer{
+    height: 80px;
+    }
+    #footer h1{
+        font-size: 25px;
+        }
+}
 
 
 
