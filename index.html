@@ -22,16 +22,40 @@
     <body>
         <div id="main">
             <header id="header">
-                <nav>
+
+                <nav class="nav-movil">
+                    <div class="nav-movil_content">
+                        <div class="logo">
+                            <h1>Cog<span>.</span></h1>
+                        </div>
+                        <button id="open" class="burguer-menu">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line1"></div>
+                        </button>
+                    </div>
+                    <ul id="list">
+                        <li><a href="#aboutme">About me</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+
+                        <button id="close">
+                            <div></div>
+                        </button>
+                    </ul>
+                </nav>
+
+                <nav class="nav-pc">
                     <div class="logo">
                         <h1>Cog<span>.</span></h1>
                     </div>
                     <ul>
-                        <li>About me</li>
-                        <li>Awards</li>
-                        <li>Contact Me</li>
+                        <li><a href="#aboutme">About me</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
                     </ul>
                 </nav>
+
             </header>
 
 
@@ -43,7 +67,7 @@
                 </main>
 
                 <aside>
-                    <img class="camilo" src="img/Camilo 2.png" alt="">
+                    <img class="camilo" src="img/camilo.webp" alt="">
                     <div class="board">
                         <img src="img/chessboard.png" alt="">
                     </div>
@@ -52,8 +76,6 @@
 
 
             <div id="aboutme">
-                <div class="shadow-aboutme"></div>
-
                 <nav>
                     <h1>ABOUT ME</h1>
                     <div class="divition-nav"></div>
@@ -100,25 +122,25 @@
                 </nav>
                 <main>
                     <div class="card">
-                        <img src="img/medal.png" alt="">
+                        <img src="img/barranquilla.webp" alt="">
+                        <h1>CAMPEÓN NACIONAL DE AJEDREZ</h1>
+                        <p>Superate Barranquilla</p>
+                        <h2>2018</h2>
+                    </div>
+                    <div class="card">
+                        <img src="img/infantil.webp" alt="">
+                        <h1>CAMPEÓN NACIONAL DE AJEDREZ</h1>
+                        <p>Superate infantil</p>
+                        <h2>2013</h2>
+                    </div>
+                    <div class="card">
+                        <img src="img/barranquilla.webp" alt="">
                         <h1>CAMPEÓN NACIONAL DE AJEDREZ</h1>
                         <p>Superate infantil</p>
                         <h2>2018</h2>
                     </div>
                     <div class="card">
-                        <img src="img/medal.png" alt="">
-                        <h1>CAMPEÓN NACIONAL DE AJEDREZ</h1>
-                        <p>Superate infantil</p>
-                        <h2>2018</h2>
-                    </div>
-                    <div class="card">
-                        <img src="img/medal.png" alt="">
-                        <h1>CAMPEÓN NACIONAL DE AJEDREZ</h1>
-                        <p>Superate infantil</p>
-                        <h2>2018</h2>
-                    </div>
-                    <div class="card">
-                        <img src="img/medal.png" alt="">
+                        <img src="img/infantil.webp" alt="">
                         <h1>CAMPEÓN NACIONAL DE AJEDREZ</h1>
                         <p>Superate infantil</p>
                         <h2>2018</h2>
@@ -160,8 +182,7 @@
             <footer id="footer">
                 <h1><span>&copy; 2022</span> - Todos los derechos reservados</h1>
             </footer>
-
-            <div class="shadow-bot"></div>
         </div>
+        <script src="index.js"></script>
     </body>
 </html>
